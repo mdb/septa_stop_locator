@@ -35,5 +35,19 @@ describe SeptaStopLocator do
         expect(@first['stopid']).to eq 20659
       end
     end
+
+    context 'when the lat/lng coordinates are just east of 13th Street Station' do
+      before :each do
+        @stops = SeptaStopLocator.find(39.9533884, -75.1591538, 34)
+      end
+
+      it 'only returns the westbound stop' do
+        expect(@stops.length).to eq 1
+      end
+
+      it 'returns the correct stop name' do
+        expect(@stops[0]['stopname']).to eq '13th St Trolley Station'
+      end
+    end
   end
 end

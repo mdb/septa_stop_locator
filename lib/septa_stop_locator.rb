@@ -14,6 +14,6 @@ module SeptaStopLocator
       (stop['stopname'] == stop_one['stopname']) && (stop['stopid'] != stop_one['stopid'])
     }
 
-    [stop_one, stop_two]
+    [stop_one, stop_two].compact
   end
 end

@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe SeptaStopLocator::Route do
-  describe '#stops' do
+  describe '#stops', vcr: { cassette_name: 'route' } do
     before :each do
       @route = SeptaStopLocator::Route.new(34)
     end

@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe SeptaStopLocator do
-  describe '.find' do
+  describe '.find', vcr: { cassette_name: 'stop_locator' } do
     before :each do
       @stops = SeptaStopLocator.find(39.9539910, -75.1682170, 34)
     end
@@ -36,7 +36,7 @@ describe SeptaStopLocator do
       end
     end
 
-    context 'when the lat/lng coordinates are just east of 13th Street Station' do
+    context 'when the lat/lng coordinates are just east of 13th Street Station', vcr: { cassette_name: 'stop_locator_east' } do
       before :each do
         @stops = SeptaStopLocator.find(39.9533884, -75.1591538, 34)
       end

@@ -20,7 +20,10 @@ describe SeptaStopLocator do
       end
 
       it 'has a distance' do
-        expect(@first['distance']).to eq 935.6262555741262
+        # Travis.ci thinks 935.6262555741263; laptop thinks 935.6262555741262
+        approx_distance = @first['distance'].round(12)
+
+        expect(approx_distance).to eq 935.626255574126
       end
 
       it 'has a lat' do

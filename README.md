@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mdb/septa_stop_locator.svg?branch=master)](https://travis-ci.org/mdb/septa_stop_locator)
+
 # SeptaStopLocator
 
 Get the SEPTA stops closest to a lat/long point for a given bus/trolley route.

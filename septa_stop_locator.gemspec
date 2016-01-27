@@ -20,9 +20,9 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'haversine', '0.3.0'
 
-  spec.add_development_dependency 'bundler', '~> 1.6'
-  spec.add_development_dependency 'rake', '10.4.2'
-  spec.add_development_dependency 'rspec', '3.2.0'
-  spec.add_development_dependency 'vcr', '2.9.3'
-  spec.add_development_dependency 'webmock', '1.20.4'
+  spec.add_development_dependency 'bundler', '1.11.2'
+  spec.add_development_dependency 'rake', '10.5.0'
+  spec.add_development_dependency 'rspec', '3.4.0'
+  spec.add_development_dependency 'vcr', '3.0.1'
+  spec.add_development_dependency 'webmock', '1.22.6'
 end
